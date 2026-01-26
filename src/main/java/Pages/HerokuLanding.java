@@ -1,0 +1,36 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import Base.BaseClass;
+
+public class HerokuLanding extends BaseClass{
+
+private WebDriver driver;
+
+public HerokuLanding(WebDriver driver)
+{
+
+    this.driver=driver;
+}
+
+public void HerokuHomepage()
+{
+
+    driver.get("https://the-internet.herokuapp.com/");
+    
+}
+
+public void ABTestingPage()
+{
+    driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
+   By abtesting= By.cssSelector("a[href='/abtest']");
+   driver.findElement(abtesting).click();
+
+
+
+}
+
+
+}
