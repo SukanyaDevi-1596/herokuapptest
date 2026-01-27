@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import java.time.Duration;
 
 import Base.BaseClass;
 
@@ -24,13 +25,35 @@ public void HerokuHomepage()
 
 public void ABTestingPage()
 {
-    driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
    By abtesting= By.cssSelector("a[href='/abtest']");
    driver.findElement(abtesting).click();
+}
 
 
+public void CheckBoxesPage()
+{
+
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    driver.findElement(By.cssSelector("a[href='/checkboxes']")).click();
 
 }
 
+
+
+public void Check()
+{
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    driver.findElement(By.xpath("//form[@id='checkboxes']//input[@type='checkbox'][1]")).click();
+
+}
+
+public void uncheck()
+{
+
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    driver.findElement(By.xpath("//form[@id='checkboxes']//input[@type='checkbox'][2]")).click();
+
+}
 
 }
