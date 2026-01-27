@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="3.415" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Herokuapp Testing" name="Navigate to A/B Testing" time="3.298">
+<testsuite name="Cucumber" time="6.676" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Herokuapp Testing" name="Navigate to A/B Testing" time="4.781">
 <system-out><![CDATA[
 Given I open herokuapp website..............................................passed
 Then I navigate to A/B Testing page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Herokuapp Testing" name="Testing Checkboxes" time="1.778">
+<system-out><![CDATA[
+Given I open herokuapp website..............................................passed
+Then I navigate to Checkboxes page..........................................passed
+And I check the first Checkbox..............................................passed
+And I uncheck the second Checkbox...........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
