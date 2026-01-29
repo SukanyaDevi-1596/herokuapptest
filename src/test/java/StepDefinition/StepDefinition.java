@@ -64,6 +64,22 @@ HL.uncheck();
 }
 
 
+
+@Then("I navigate to Dropdown page")
+public void i_navigate_to_Dropdown_page()
+{
+    HL.dropdownpage();
+}
+
+@And("I select {string} from the Dropdown menu")
+public void i_select_from_the_dropdown_menu(String options)
+{
+    HL.selectfromdown(options);
+}
+
+
+
+
 @After
 public void tearDown()
 {
