@@ -3,7 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import java.time.Duration;
-
+import org.openqa.selenium.support.ui.Select;
 import Base.BaseClass;
 
 public class HerokuLanding extends BaseClass{
@@ -56,4 +56,20 @@ public void uncheck()
 
 }
 
+
+public void dropdownpage()
+{
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    driver.findElement(By.cssSelector("a[href='/dropdown']")).click();
+}
+
+
+public void selectfromdown(String options)
+{
+
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    Select item=new Select(driver.findElement(By.id("dropdown")));
+    item.selectByValue(options);
+    System.out.println("Successfully selected option"+options);
+}
 }

@@ -12,4 +12,13 @@ Feature: Herokuapp Testing
     And I check the first Checkbox
     And I uncheck the second Checkbox
     
-  
+  @Smoke
+  Scenario Outline:Testing Dropdown
+    Given I open herokuapp website
+    Then I navigate to Dropdown page
+    And I select "<options>" from the Dropdown menu
+
+    Examples:
+    |options|
+    |1|
+    |2|
